@@ -73,6 +73,11 @@ main {
 	padding: 0.5rem 0;
 	height: 0;
 	display: none;
+	color: var(--grayish-blue);
+}
+
+.faq-container.active .faq-question {
+	color: var(--dark-blue);
 }
 
 .faq-container.active .faq-answer {
