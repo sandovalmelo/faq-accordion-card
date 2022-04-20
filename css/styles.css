@@ -25,9 +25,13 @@ body {
 	font-family: "Kumbh Sans", sans-serif;
 	background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
 	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 main {
+	flex: 1;
 	margin: 1rem;
 	padding: 1rem 1.5rem 4rem;
 	background-color: var(--light-grayish-blue);
@@ -63,7 +67,7 @@ main {
 
 .faq-question {
 	font-size: 0.9rem;
-	overflow: hidden;
+	width: 100%;
 	color: var(--dark-grayish-blue);
 }
 
@@ -87,4 +91,60 @@ main {
 
 .faq-container.active .icon-arrow {
 	transform: rotate(180deg);
+}
+
+@media (max-width: 899px) {
+	main {
+		position: relative;
+		margin-top: 10rem;
+		padding-top: 13rem;
+	}
+
+	.img-container {
+		background-image: url("./../images/bg-pattern-mobile.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom;
+		padding-bottom: 3rem;
+		max-width: 360px;
+		width: 100%;
+		position: absolute;
+		top: -10rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@media (max-width: 400px) {
+	main {
+		padding-top: 8rem;
+	}
+	.img-container {
+		max-width: 260px;
+		top: -8rem;
+	}
+}
+
+@media (min-width: 900px) {
+	main {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 800px;
+		padding: 2rem 2rem 2rem 0;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.img-container {
+	}
+
+	.faq {
+	}
+
+	.faq-container {
+	}
+
+	.faq-title {
+		text-align: left;
+	}
 }
