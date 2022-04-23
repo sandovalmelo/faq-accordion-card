@@ -1,7 +1,16 @@
-const questionContainer = Array.from(document.querySelectorAll(".faq-question-container"));
+const faq = document.getElementById("faq");
+const faqContainerAll = Array.from(document.querySelectorAll(".faq-container"));
 
-questionContainer.forEach((container) => {
-	container.addEventListener("click", (event) => {
-		event.target.parentElement.parentElement.classList.toggle("active");
+faq.addEventListener("click", (event) => {
+	const faqContainer = event.target.closest(".faq-container");
+
+	faqContainerAll.forEach((container) => {
+		if (container !== faqContainer) {
+			container.classList.remove("active");
+		}
 	});
+
+	if (faqContainer) {
+		faqContainer.classList.toggle("active");
+	}
 });
