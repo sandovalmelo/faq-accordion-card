@@ -152,9 +152,33 @@ main {
 		display: none;
 	}
 
+	.faq {
+		padding-right: 4rem;
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.faq-title {
+		padding-top: 1.5rem;
+		text-align: left;
+	}
+
+	.faq-question-container {
+		cursor: pointer;
+	}
+
+	.faq-question {
+		font-size: 0.9rem;
+	}
+
 	.faq-container.active .faq-question:hover,
 	.faq-question:hover {
 		color: var(--soft-red);
+	}
+
+	.faq-answer {
+		font-size: 0.85rem;
 	}
 
 	.box {
@@ -182,22 +206,6 @@ main {
 		top: 50%;
 		transform: translateY(-50%);
 		max-width: 400px;
-	}
-
-	.faq {
-		padding-right: 4rem;
-		min-height: 400px;
-		display: flex;
-		flex-direction: column;
-		padding-top: 2rem;
-	}
-
-	.faq-title {
-		text-align: left;
-	}
-
-	.faq-question-container {
-		cursor: pointer;
 	}
 }
 
